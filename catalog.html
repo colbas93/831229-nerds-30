@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#">Главная
+                <img src="https://via.placeholder.com/150x100" alt="">
+            </a>
+            <ul class="menu">
+                <li class="studio">
+                    <a class="studio-link" href="#">Студия</a>
+                </li>
+                <li class="clients">
+                    <a class="clients-link" href="#">Клиенты</a>
+                </li>
+                <li class="store">
+                    <a class="store-link" href="catalog.html">Магазин</a>
+                </li>
+                <li class="contacts">
+                    <a class="contacts-link" href="#">Контакты</a>
+                </li>
+            </ul>
+            <ul class="user">
+                <li class="basket">
+                    <a class="basket-link" href="#">Корзина</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="visually-hidden">Магазин готовых шаблонов</h1>
+        <!-- Левый блок -->
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <form method="GET" action="https://echo.htmlacademy.ru">
+            <fieldset>
+                <legend>Стоимость:</legend>
+                <input type="range" min="0" max="15000">
+                <label for="value-min">От</label>
+                <input id="value-min" type="number" value="0">
+                <label for="value-max">До</label>
+                <input id="value-max" type="number" value="15000">
+            </fieldset>
+            <fieldset>
+                <legend>Сетка:</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="grid-viev" id="filter-adaptive" value="adaptive" checked>
+                        <label for="filter-adaptive">Адаптивная</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="grid-viev" id="" value="fixed">
+                        <label for="filter-fixed">Фиксированная</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="grid-viev" id="" value="rubber">
+                        <label for="filter-rubber">Резиновая</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Особенности:</legend>
+                <ul class="features">
+                    <li class="feature-item">
+                        <input type="checkbox" name="filter-slider" id="filter-slider" checked>
+                        <label for="filter-slider">Слайдер</label>
+                    </li>
+                    <li class="feature-item">
+                        <input type="checkbox" name="filter-advantages_block" id="filter-advantages_block">
+                        <label for="filter-advantages_block">Блок приемуществ</label>
+                    </li>
+                    <li class="feature-item">
+                        <input type="checkbox" name="filter-news" id="filter-news" checked>
+                        <label for="filter-news">Новости</label>
+                    </li>
+                    <li class="feature-item">
+                        <input type="checkbox" name="filter-gallery" id="filter-gallery">
+                        <label for="filter-gallery">Галерея</label>
+                    </li>
+                    <li class="feature-item">
+                        <input type="checkbox" name="filter-basket" id="filter-basket">
+                        <label for="filter-basket">Карзина</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <button type="submit">Показать</botton>
+        </form>
+
+        <!-- Правый блок -->
+        <!-- сортировка -->
+        <section class="sort">
+            <h2>Сортировать:</h2>
+            <ul class="sort-list">
+                <li class="sort-item"><a href="">По цене</a></li>
+                <li class="sort-item"><a href="">По типу</a></li>
+                <li class="sort-item"><a href="">По Названию</a></li>
+                <li class="sort-item"><a name="down" href=""></a></li>
+                <li class="sort-item"><a name="up" href=""></a></li>
+            </ul>
+        </section>
+        <!-- Продукты -->
+        <section class="products">
+            <ul class="product-list">
+                <li class="product-item">
+                    <a href="" class="product-item-link">
+                        <img src="https://via.placeholder.com/150x100" alt="">
+                        <div class="price-product">
+                            <h3 class="product-price-title">Sedona</h3>
+                            <p class="product-price-item">Информационный сайт для туристов</p>
+                            <span class="btn product-price-btn">9900 Р</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="product-item"> <a href="" class="product-item-link">
+                        <img src="https://via.placeholder.com/150x100" alt="">
+                        <div class="price-product">
+                            <h3 class="product-price-title">Pink APP</h3>
+                            <p class="product-price-item">Продуктовый лендинг приложения для iOS и Android</p>
+                            <span class="btn product-price-btn">9900 Р</span>
+                        </div>
+                    </a></li>
+                <li class="product-item"> <a href="" class="product-item-link">
+                        <img src="https://via.placeholder.com/150x100" alt="">
+                        <div class="price-product">
+                            <h3 class="product-price-title">Barbershop</h3>
+                            <p class="product-price-item">Сайт салона красоты. Для мужчин, да.</p>
+                            <span class="btn product-price-btn">9900 Р</span>
+                        </div>
+                    </a></li>
+                <li class="product-item"> <a href="" class="product-item-link">
+                        <img src="https://via.placeholder.com/150x100" alt="">
+                        <div class="price-product">
+                            <h3 class="product-price-title">Mishka</h3>
+                            <p class="product-price-item">Интернет-магазин вязаных игрушек</p>
+                            <span class="btn product-price-btn">9900 Р</span>
+                        </div>
+                    </a></li>
+                <li class="product-item"> <a href="" class="product-item-link">
+                        <img src="https://via.placeholder.com/150x100" alt="">
+                        <div class="price-product">
+                            <h3 class="product-price-title">A PLUS</h3>
+                            <p class="product-price-item">Лендинг курсов повышения квалификации</p>
+                            <span class="btn product-price-btn">9900 Р</span>
+                        </div>
+                    </a></li>
+                <li class="product-item"> <a href="" class="product-item-link">
+                        <img src="https://via.placeholder.com/150x100" alt="">
+                        <div class="price-product">
+                            <h3 class="product-price-title">Кваст</h3>
+                            <p class="product-price-item">Промо-сайт производителя крафтового кваса</p>
+                            <span class="btn product-price-btn">9900 Р</span>
+                        </div>
+                    </a></li>
+            </ul>
+        </section>
+        <section class="catalog-navigation">
+            <ul class="catalog-navigation-list">
+                <li class="catalog-navigation-item"><a class="catalog-navigation-link">1</a></li>
+                <li class="catalog-navigation-item"><a href="" class="catalog-navigation-link">2</a></li>
+                <li class="catalog-navigation-item"><a href="" class="catalog-navigation-link">2</a></li>
+                <li class="catalog-navigation-item"><a href="" class="catalog-navigation-link">Следующая</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <section class="contact">
+            <h2>Наши контакты</h2>
+            <div class="contact-block">
+                <h3 class="contact-title">NЁRDS DESIGN STUDIO</h3>
+                <p class="adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                Тел.<a href="tel:+78122757575">+7(812) 275-75-75</a>
+                <a href="">Напишите нам</a>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858716070614!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2snl!4v1611319999142!5m2!1sru!2snl"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+
+            </div>
+        </section>
+        <section class="social">
+            <ul class="social-list">
+                <li class="social-list-item"><a href="">Вконтакте</a></li>
+                <li class="social-list-item"><a href="">Фейсбук</a></li>
+                <li class="social-list-item"><a href="">Инстаграм</a></li>
+            </ul>
+        </section>
+        <p class="sale"><span>Давайте дружить, это выгодно!</span>Скидка 10% для друзей из социальных сетей.</p>
+    </footer>
+
+    <section class="connection">
+        <h2>Напишите нам</h2>
+        <!-- тут будет форма -->
+        <button type="button">Отправить</button>
+    </section>
+
+</body>
+
+</html>
