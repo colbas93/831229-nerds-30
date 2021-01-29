@@ -1,0 +1,71 @@
+/* Цвета */
+:root {
+    --basic-white: #ffffff;
+    --basic-gray: #eeeeee;
+    --basic-black: #000000;
+    --basic-red: #fb565a;
+    --basic-green: #00ca74;
+    --basic-yellou: #efc849;
+
+    --hover-red: #E74246;
+    --hover-green: #00BC6C;
+    --hover-yellow:#EAB534;
+
+    --active-red: #D7373B;
+    --active-green: #00AA62;
+    --active-yellow: #E5A722;
+}
+
+/* Общее */
+.page-body {
+    min-width: 1160px;
+    padding: 0;
+    margin: 0;
+    font-family: "roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--basic-black);
+  }
+
+  a {
+    font-family: "roboto", Arial, sans-serif;
+    color: var(--basic-black);
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .visually-hidden {
+    display: none;
+}
+
+/* Навигация */
+
+.menu,
+.user {
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.menu a:hover,
+.user a:hover {
+  color: var(--basic-red);
+}
+
+.menu a:active,
+.user a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Услуги */
+
+
