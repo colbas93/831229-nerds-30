@@ -8,15 +8,16 @@ Variables
   --gray-100: #eeeeee;
   --gray-200: #e1e1e1;
   --gray-300: #d7dcde;
-  --gray-400: #dfdfdf;
-  --gray-500: #d5d5d5;
-  --gray-600: #c1c1c1;
-  --gray-700: #b4b9bb;
-  --gray-800: #a6a6a6;
-  --gray-900: #ababab;
-  --gray-1000: #666666;
-  --gray-1100: #444444;
-  --gray-1200: #283136;
+  --gray-400: #DBDBDB;
+  --gray-500: #dfdfdf;
+  --gray-600: #d5d5d5;
+  --gray-700: #c1c1c1;
+  --gray-800: #b4b9bb;
+  --gray-900: #a6a6a6;
+  --gray-1000: #ababab;
+  --gray-1100: #666666;
+  --gray-1200: #444444;
+  --gray-1300: #283136;
   --black: #000000;
   --red-100: #fb565a;
   --red-200: #e74246;
@@ -39,7 +40,8 @@ Variables
 Global
 ========================================*/
 
-html {
+.page {
+  height: 100%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -57,6 +59,9 @@ html {
   font-size: 16px;
   line-height: 24px;
   color: var(--basic-black);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 a {
@@ -80,6 +85,14 @@ img {
   list-style: none;
 }
 
+.r-index-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
 .visually-hidden, .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -97,6 +110,11 @@ img {
   border-bottom: 2px solid var(--gray-100);
 }
 
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /*======================================
 Buttons
 ========================================*/
@@ -108,6 +126,7 @@ Buttons
   transition: var(--transition);
   text-align: center;
   text-decoration: none;
+  line-height: 18px;
   font-family: inherit;
   font-weight: 500;
   text-transform: uppercase;
@@ -115,7 +134,6 @@ Buttons
   padding: 16px 40px;
   border-radius: 3px;
   outline: none;
-  transition: var(--transition);
 }
 
 .btn:active {
@@ -160,7 +178,18 @@ Buttons
 }
 
 .btn-gray {
-  /* grey */
+  background-color: var(--gray-100);
+  color: var(--black);
+}
+
+.btn-gray:hover,
+.btn-gray:focus {
+  background-color: var(--gray-400);
+}
+
+.btn-gray:active {
+  background-color: var(--gray-500);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /*======================================
@@ -168,17 +197,21 @@ Header
 ========================================*/
 
 /* Navigation */
+.header-bar {
+  background-color: var(--gray-100);
+}
 
 .nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
 }
 
 .menu {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .user {
-  display: flex;
 }
 
 .menu-link {
@@ -215,7 +248,29 @@ Service
 ========================================*/
 
 .service-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.service-list-item-red {
+  display: inline-block;
+  background-color: var(--red-100);
+  width: 300px;
+  height: 146px;
+}
+
+.service-list-item-green {
+  background-color: var(--green-100);
+  display: inline-block;
+  width: 300px;
+  height: 146px;
+}
+
+.service-list-item-yellow {
+  background-color: var(--yellow-100);
+  display: inline-block;
+  width: 300px;
+  height: 146px;
 }
 
 .service-title {
@@ -291,12 +346,6 @@ Footer
 
 /* Contacts */
 
-.contact-block-title {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 30px;
-}
-
 .contact-block-address {
   line-height: 18px;
 }
@@ -319,16 +368,27 @@ Footer
   width: 100%;
 }
 
-.social-item {
+.social-link {
   width: 81px;
   height: 81px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--gray-200);
   border-radius: 50%;
 }
 
-/* .social-link {
+.social-link:hover {
+  background-color: var(--red-200);
+}
+.social-link:active {
+  background-color: var(--red-300);
+  box-shadow: var(--shadow);
+}
 
-} */
+svg {
+  fill: var(--white);
+}
 
 /* Скидка */
 
@@ -365,6 +425,11 @@ Footer
   border-color: var(--gray-700);
 }
 
+.modal input:focus {
+  border-color: var(--black);
+  color:var(--black);
+}
+
 .modal textarea {
   border: 2px solid var(--gray-300);
   border-radius: 3px;
@@ -373,3 +438,82 @@ Footer
 .modal textarea:hover {
   border-color: var(--gray-700);
 }
+
+.modal textarea:focus {
+  border-color: var(--black);
+  color:var(--black);
+}
+
+/*======================================
+CATALOG
+========================================*/
+
+/*======================================
+Filter
+========================================*/
+
+/* Left column */
+.page-title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.filter-text {
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: var(--gray-1200);
+}
+
+.filter-btn {
+  padding: 17px 89px 15px 88px;
+}
+
+/* Right column */
+.catalog-column {
+  display: flex;
+}
+
+.sort-list {
+  display: flex;
+}
+
+.sort-link {
+  color: var(--black);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sort-link-disabled {
+  color:rgba(0, 0, 0, 0.3);
+}
+
+.product-item-text {
+  color: var(--gray-1000);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+}
+
+.pagination .btn {
+  padding: 15px 20px 17px 20px;
+}
+
+.pagination-link-active {
+  outline: 3px solid var(--gray-400);
+  outline-offset: -3px;
+  background-color: var(--white);
+  border-radius: 3px;
+}
+
+.pagination-link-next {
+  padding: 17px 77px 15px 78px;
+}
+
+

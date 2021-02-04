@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8" />
@@ -19,71 +19,79 @@
 <body class="page-body">
   <!-- Шапка -->
   <header class="header">
-    <nav class="nav">
-      <a class="main-logo" title="Нёрдс">
-        <img src="img/header/nerds-logo.svg" width="160" height="66" alt="Нёрдс" />
-      </a>
-      <ul class="r-index-ul menu">
-        <li class="menu-item">
-          <a class="menu-link" href="#">Студия</a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="#">Клиенты</a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="catalog.html">Магазин</a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="#">Контакты</a>
-        </li>
-      </ul>
-      <ul class="r-index-ul user">
-        <li class="user-item">
-          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
-              fill="#A6A6A6" />
-            <path
-              d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
-              fill="#A6A6A6" />
-            <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="#A6A6A6" />
-          </svg>
-          <a class="user-link menu-link basket-link" href="#">Корзина</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header-bar">
+      <div class="wrapper">
+        <nav class="nav">
+          <a class="main-logo" title="Нёрдс">
+            <img src="img/header/nerds-logo.svg" width="160" height="66" alt="Нёрдс" />
+          </a>
+          <ul class="r-index-ul menu">
+            <li class="menu-item">
+              <a class="menu-link" href="#">Студия</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#">Клиенты</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="catalog.html">Магазин</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul class="r-index-ul user">
+            <li class="user-item">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
+                  fill="#A6A6A6" />
+                <path
+                  d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
+                  fill="#A6A6A6" />
+                <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="#A6A6A6" />
+              </svg>
+              <a class="user-link menu-link basket-link" href="#">Корзина</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <!-- Основное содержимое -->
   <main>
     <h1 class="visually-hidden">Веб-студия "Nerds"</h1>
     <!-- Слайдер -->
-    <section class="slides">
+    <section class="slides header-bar">
       <div class="wrapper">
         <ul class="r-index-ul hero-slides">
           <li class="hero-slide">
-            <p class="hero-slide-title">Долго, дорого, скрупулезно.</p>
-            <p class="hero-slide-text">
+            <p class="r-index hero-slide-title">Долго, дорого, скрупулезно.</p>
+            <p class="r-index hero-slide-text">
               Математически выверенный дизайн для вашего сайта или мобильного
               приложения.
             </p>
             <a href="#" class="btn btn-red hero-slide-btn">Узнать больше</a>
           </li>
         </ul>
+      </div>
+      <div class="wrapper">
         <ul class="r-index-ul hero-slides">
           <li class="hero-slide">
-            <p class="hero-slide-title">Любим математику как никто другой</p>
-            <p class="hero-slide-text">
+            <p class="r-index hero-slide-title">Любим математику как никто другой</p>
+            <p class="r-index hero-slide-text">
               Никакого креатива, только математические формулы для расчета
               идеальных пропорций.
             </p>
             <a href="#" class="btn btn-red hero-slide-btn">Узнать больше</a>
           </li>
         </ul>
+      </div>
+      <div class="wrapper">
         <ul class="r-index-ul hero-slides">
           <li class="hero-slide">
-            <p class="hero-slide-title">Только ночь, только хардкор</p>
-            <p class="hero-slide-text">
+            <p class="r-index hero-slide-title">Только ночь, только хардкор</p>
+            <p class="r-index hero-slide-text">
               Работать днем, как все? Мы против этого. Ближе к полуночи работа
               только начинается.
             </p>
@@ -93,29 +101,32 @@
       </div>
     </section>
     <!--Услуги  -->
-    <section class="services">
+    <section class="services wrapper">
       <h2 class="visually-hidden">Услуги</h2>
       <ul class="r-index-ul service-list">
         <li class="service-list-item">
-          <img src="img/service/illustration-1.png" width="300" height="146" alt="Веб-сайты" />
+          <img class="service-list-item-red" src="img/service/illustration-1.png" width="300" height="146"
+            alt="Веб-сайты" />
           <h3 class="r-index service-title">Веб-сайты</h3>
-          <p class="sevice-text">
+          <p class="r-index sevice-text">
             Мир никогда не будет прежним после того как увидит ваш сайт!
           </p>
           <a class="btn btn-red" href="#">Заказать</a>
         </li>
         <li class="service-list-item">
-          <img src="img/service/illustration-2.png" width="300" height="146" alt="Мобильные приложения" />
+          <img class="service-list-item-green" src="img/service/illustration-2.png" width="300" height="146"
+            alt="Мобильные приложения" />
           <h3 class="r-index service-title">Приложения</h3>
-          <p class="sevice-text">
+          <p class="r-index sevice-text">
             Покорите топ-10 приложений в AppStore и Google Play
           </p>
           <a class="btn btn-green" href="#">Заказать</a>
         </li>
         <li class="service-list-item">
-          <img src="img/service/illustration-3.png" width="300" height="146" alt="Призентации" />
+          <img class="service-list-item-yellow" src="img/service/illustration-3.png" width="300" height="146"
+            alt="Призентации" />
           <h3 class="r-index service-title">Призентации</h3>
-          <p class="sevice-text">
+          <p class="r-index sevice-text">
             Вы даже не подозреваете, насколько вы изумительны!
           </p>
           <a class="btn btn-yellow" href="#">Заказать</a>
@@ -123,14 +134,14 @@
       </ul>
     </section>
     <!-- О компании -->
-    <section class="company">
+    <section class="company wrapper">
       <h2 class="visually-hidden">О нас</h2>
       <!-- Левый блок -->
       <div class="company-column">
-        <p class="company-lead">
+        <p class="r-index company-lead">
           Мы — маленькая, но гордая дизайн-студия из Краснодара.
         </p>
-        <p class="company-text">
+        <p class="r-index company-text">
           Исповедуем принципы минимализма и чистоты. Ставим математический
           расчет превыше креатива. Работаем не покладая рук, как роботы.
         </p>
@@ -153,22 +164,22 @@
         </h3>
         <ul class="r-index-ul company-stats">
           <li class="company-stats-item">
-            <p class="company-stats-count">
+            <p class="r-index company-stats-count">
               146<sup class="company-stats-percent">%</sup>
             </p>
-            <p class="company-stats-name">Уровень самоотдачи</p>
+            <p class="r-index company-stats-name">Уровень самоотдачи</p>
           </li>
           <li class="company-stats-item">
-            <p class="company-stats-count">
+            <p class="r-index company-stats-count">
               100<sup class="company-stats-percent">%</sup>
             </p>
-            <p class="company-stats-name">Соблюдение сроков</p>
+            <p class="r-index company-stats-name">Соблюдение сроков</p>
           </li>
           <li class="company-stats-item">
-            <p class="company-stats-count">
+            <p class="r-index company-stats-count">
               50<sup class="company-stats-percent">%</sup>
             </p>
-            <p class="company-stats-name">Минимальная предоплата</p>
+            <p class="r-index company-stats-name">Минимальная предоплата</p>
           </li>
         </ul>
       </div>
@@ -211,11 +222,11 @@
       </div>
       <div class="container footer-inner">
         <div class="contact-block">
-          <h3 class="r-index contact-block-title">NЁRDS DESIGN STUDIO</h3>
-          <p class="contact-block-adrress">
+          <h3 class="r-index contact-block-title r-index-title">NЁRDS DESIGN STUDIO</h3>
+          <p class="r-index contact-block-adrress">
             191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
-          <p>
+          <p class="r-index">
             Тел.
             <a class="contact-block-phone" href="tel:+78122757575">+7(812) 275-75-75</a>
           </p>
@@ -255,8 +266,7 @@
       </p>
     </section>
   </footer>
-
-  <section class="modal">
+<!--   <section class="modal">
     <h2 class="modal-title">Напишите нам</h2>
     <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
       <label for="user">Ваше имя:</label>
@@ -268,6 +278,7 @@
     </form>
     <button class="btn btn-red modal-btn" type="button">Отправить</button>
   </section>
+-->
 </body>
 
 </html>
