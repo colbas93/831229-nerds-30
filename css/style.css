@@ -73,20 +73,20 @@ img {
   height: auto;
   vertical-align: middle;
 }
-
-.r-index {
+/* indent */
+.r-indent {
   margin: 0;
   padding: 0;
 }
 
-.r-index-ul {
+.r-indent-ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.r-index-title {
-  font-weight: bold;
+.r-indent-title {
+  font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   margin: 0;
@@ -201,14 +201,22 @@ Header
   background-color: var(--gray-100);
 }
 
+.header {
+  margin-top: 49px;
+}
+
 .nav {
-  display: grid;
-  grid-template-columns: max-content 1fr max-content;
+  display: flex;
+  align-items: center;
 }
 
 .menu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 427px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .user {
@@ -246,10 +254,15 @@ Sliders
 /*======================================
 Service
 ========================================*/
+.services {
+  padding-bottom: 80px;
+  border-bottom:2px solid var(--gray-100);
+}
 
 .service-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 105px;
 }
 
 .service-list-item-red {
@@ -277,21 +290,55 @@ Service
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+  padding-top: 25px;
 }
 
+.sevice-text {
+  padding-top: 16px;
+  padding-bottom: 32px;
+  max-width: 260px;
+}
 /*======================================
 About
 ========================================*/
+.company {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 39px;
+}
 
 .company-lead {
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
+  padding-bottom: 32px;
+}
+
+.company-text {
+  padding-bottom: 40px;
 }
 
 .company-title {
+  padding-top: 31px;
+  padding-bottom: 23px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.company-stats {
+  display: flex;
+  padding-top: 37px;
+}
+
+.company-stats-count {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+}
+
+.company-stats-percent {
+  font-size: 26px;
+ line-height: 40px;
 }
 
 .company-list-item {
@@ -310,9 +357,23 @@ About
   background-color: var(--red-100);
 }
 
+.company-column-right {
+  padding-bottom: 73px;
+  padding-top: 39px;
+}
+
+.company-column-left {
+  width: 651px;
+  padding-top: 73px;
+}
+
 /*======================================
 Clients
 ========================================*/
+.clients {
+  border-top: 2px solid var(--gray-100);
+  border-bottom: 2px solid var(--gray-100);
+}
 
 .clients-list {
   display: grid;
@@ -343,6 +404,10 @@ Clients
 /*======================================
 Footer
 ========================================*/
+.footer {
+  margin-top: 80px;
+  margin-bottom: 68px;
+}
 
 /* Contacts */
 
@@ -360,6 +425,12 @@ Footer
 }
 
 /* Соцсети */
+
+.footer-discount {
+  display: grid;
+  grid-template-columns: 400px 660px;
+  margin-top: 68px;
+}
 
 .social {
   display: flex;
@@ -380,17 +451,19 @@ Footer
 
 .social-link:hover {
   background-color: var(--red-200);
+  transition: var(--transition);
 }
 .social-link:active {
   background-color: var(--red-300);
   box-shadow: var(--shadow);
+  fill-opacity: 0.3;
 }
 
 svg {
   fill: var(--white);
 }
 
-/* Скидка */
+/* discount */
 
 .footer-discount-text {
   line-height: 22px;
@@ -402,7 +475,12 @@ svg {
   line-height: 36px;
 }
 
-/* Модальная форма */
+
+
+/*======================================
+Modal
+========================================*/
+/* modal-form */
 
 .modal-title {
   font-weight: 700;
@@ -447,23 +525,52 @@ svg {
 /*======================================
 CATALOG
 ========================================*/
+.menu-link-active {
+  border-bottom: 2px solid var(--red-100);
+}
+
+.catalog {
+  margin-top: 55px;
+}
+
+.catalog-wrapper {
+  display: grid;
+  grid-template-columns: 260px 758px;
+  justify-content: space-between;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 358px);
+  grid-gap: 30px 42px;
+}
 
 /*======================================
 Filter
 ========================================*/
 
 /* Left column */
-.page-title {
+.fieldset {
+  border: none;
+  border: 0;
+}
+
+.catalog-title {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
+  width: 727px;
+  margin: 0 auto;
+  padding-top: 78px;
+  padding-bottom: 108px;
+  background-color: var(--gray-100);
 }
 
 .filter-text {
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-color: var(--gray-1200);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--gray-1200);
 }
 
 .filter-btn {
@@ -471,12 +578,18 @@ color: var(--gray-1200);
 }
 
 /* Right column */
-.catalog-column {
+.catalog-sort {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
 }
 
 .sort-list {
   display: flex;
+  max-width: 359px;
+  justify-content: space-between;
+  width: 100%;
+
 }
 
 .sort-link {
@@ -490,6 +603,11 @@ color: var(--gray-1200);
   color:rgba(0, 0, 0, 0.3);
 }
 
+.product-item-link {
+  display: flex;
+  flex-direction: column;
+}
+
 .product-item-text {
   color: var(--gray-1000);
   font-size: 16px;
@@ -499,6 +617,12 @@ color: var(--gray-1200);
 /* Pagination */
 .pagination {
   display: flex;
+  padding-top: 54px;
+}
+
+
+.pagination-item {
+  margin-right: 11px;
 }
 
 .pagination .btn {
