@@ -23,7 +23,7 @@
       <div class="wrapper">
         <nav class="nav">
           <a href="index.html" class="main-logo" title="Нёрдс">
-            <img src="img/header/nerds-logo.svg" width="160" height="66" alt="Нёрдс" />
+            <img src="img/header/nerds-logo.svg" width="160" height="66" alt="Нёрдс">
           </a>
           <ul class="r-indent-ul menu">
             <li class="menu-item">
@@ -32,8 +32,8 @@
             <li class="menu-item">
               <a class="menu-link" href="#">Клиенты</a>
             </li>
-            <li class="menu-item menu-link-active">
-              <a class="menu-link menu-link-activ" href="catalog.html">Магазин</a>
+            <li class="menu-item">
+              <a class="menu-link menu-link-active" href="catalog.html">Магазин</a>
             </li>
             <li class="menu-item">
               <a class="menu-link" href="#">Контакты</a>
@@ -41,15 +41,6 @@
           </ul>
           <ul class="r-indent-ul user">
             <li class="user-item">
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
-                  fill="#A6A6A6" />
-                <path
-                  d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
-                  fill="#A6A6A6" />
-                <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="#A6A6A6" />
-              </svg>
               <a class="user-link menu-link basket-link" href="#">Корзина</a>
             </li>
           </ul>
@@ -71,25 +62,20 @@
           <form class="filter" method="POST" action="https://echo.htmlacademy.ru">
             <fieldset class="fieldset   r-indent ">
               <legend class="filter-title r-indent-title">Стоимость:</legend>
-              <input type="range" min="0" max="15000">
-              <label class="filter-text" for="value-min">От</label>
-              <input id="value-min" type="number" value="0">
-              <label class="filter-text" for="value-max">До</label>
-              <input id="value-max" type="number" value="15000">
             </fieldset>
             <fieldset class="fieldset r-indent">
               <legend class="filter-title r-indent-title">Сетка:</legend>
               <ul class="filter-list r-indent-ul">
                 <li class="filter-item">
-                  <input type="radio" name="grid-viev" id="filter-adaptive" value="adaptive" checked>
+                  <input class="visually-hidden radio" type="radio" name="grid-viev" id="filter-adaptive" value="adaptive" checked>
                   <label class="filter-text" for="filter-adaptive">Адаптивная</label>
                 </li>
                 <li class="filter-item">
-                  <input type="radio" name="grid-viev" id="filter-fixed" value="fixed">
+                  <input class="visually-hidden radio" type="radio" name="grid-viev" id="filter-fixed" value="fixed">
                   <label class="filter-text" for="filter-fixed">Фиксированная</label>
                 </li>
                 <li class="filter-item">
-                  <input type="radio" name="grid-viev" id="filter-rubber" value="rubber">
+                  <input class="visually-hidden radio" type="radio" name="grid-viev" id="filter-rubber" value="rubber">
                   <label class="filter-text" for="filter-rubber">Резиновая</label>
                 </li>
               </ul>
@@ -98,23 +84,23 @@
               <legend class="filter-title r-indent-title">Особенности:</legend>
               <ul class="filter-list r-indent-ul">
                 <li class="filter-item">
-                  <input type="checkbox" name="filter-slider" id="filter-slider" checked>
+                  <input class="visually-hidden checkbox" type="checkbox" name="filter-slider" id="filter-slider" checked>
                   <label class="filter-text" for="filter-slider">Слайдер</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="filter-advantages_block" id="filter-advantages_block">
+                  <input class="visually-hidden checkbox" type="checkbox" name="filter-advantages_block" id="filter-advantages_block">
                   <label class="filter-text" for="filter-advantages_block">Блок приемуществ</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="filter-news" id="filter-news" checked>
+                  <input class="visually-hidden checkbox" type="checkbox" name="filter-news" id="filter-news" checked>
                   <label class="filter-text" for="filter-news">Новости</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="filter-gallery" id="filter-gallery">
+                  <input class="visually-hidden checkbox" type="checkbox" name="filter-gallery" id="filter-gallery">
                   <label class="filter-text" for="filter-gallery">Галерея</label>
                 </li>
                 <li class="filter-item">
-                  <input type="checkbox" name="filter-basket" id="filter-basket">
+                  <input class="visually-hidden checkbox" type="checkbox" name="filter-basket" id="filter-basket">
                   <label class="filter-text" for="filter-basket">Карзина</label>
                 </li>
               </ul>
@@ -132,8 +118,18 @@
               <li class="sort-item"><a href="#" class="sort-link sort-link-disabled">По типу</a></li>
               <li class="sort-item"><a href="#" class="sort-link sort-link-disabled">По Названию</a></li>
               <li class="sort-item sort-item-type">
-                <a class="sort-item-type-down" href="#"></a>
-                <a class="sort-item-type-up" href="#"></a>
+                <a class="sort-item-type-down" href="#">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 10L0 0H11" fill="" />
+                  </svg>
+                </a>
+                <a class="sort-item-type-up" href="#">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.2">
+                      <path d="M5.5 0L0 10H11L5.5 0Z" fill="" />
+                    </g>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
