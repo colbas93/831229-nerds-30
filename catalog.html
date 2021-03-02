@@ -18,56 +18,55 @@
 
 <body class="page-body">
   <!-- Шапка -->
-  <div class="header-bar">
-    <header class="header">
-      <div class="wrapper">
-        <nav class="nav">
-          <a href="index.html" class="main-logo" title="Нёрдс">
-            <img src="img/header/nerds-logo.svg" width="160" height="66" alt="Нёрдс">
-          </a>
-          <ul class="r-indent-ul menu">
-            <li class="menu-item">
-              <a class="menu-link" href="#">Студия</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Клиенты</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link menu-link-active" href="catalog.html">Магазин</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Контакты</a>
-            </li>
-          </ul>
-          <ul class="r-indent-ul user">
-            <li class="user-item">
-              <a class="user-link menu-link basket-link" href="#">Корзина</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  </div>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="main-logo" title="Нёрдс">
+          <img src="img/header/nerds-logo.svg" width="160" height="66" alt="Нёрдс">
+        </a>
+        <ul class="r-indent-ul menu">
+          <li class="menu-item">
+            <a class="menu-link" href="#">Студия</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Клиенты</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link menu-link-active" href="catalog.html">Магазин</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="r-indent-ul user">
+          <li class="user-item">
+            <a class="user-link menu-link basket-link" href="#">Корзина</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="page-catalog">
     <!-- Левый блок -->
-    <div class="header-bar">
-      <h1 class="catalog-title container r-indent-title">Магазин готовых шаблонов</h1>
+    <div class="page-title">
+      <h1 class="page-title-headline container r-indent">Магазин готовых шаблонов</h1>
     </div>
-    <section class="catalog wrapper">
+    <section class="catalog container">
       <h2 class="visually-hidden">Каталог</h2>
-      <div class="container catalog-wrapper">
+      <div class="catalog-container">
         <div class="catalog-filter">
           <h3 class="visually-hidden">Фильтр товаров</h3>
           <form class="filter" method="POST" action="https://echo.htmlacademy.ru">
             <fieldset class="fieldset   r-indent ">
-              <legend class="filter-title r-indent-title">Стоимость:</legend>
+              <legend class="filter-title catalog-title">Стоимость:</legend>
             </fieldset>
             <fieldset class="fieldset r-indent">
-              <legend class="filter-title r-indent-title">Сетка:</legend>
+              <legend class="filter-title catalog-title">Сетка:</legend>
               <ul class="filter-list r-indent-ul">
                 <li class="filter-item">
-                  <input class="visually-hidden radio" type="radio" name="grid-viev" id="filter-adaptive" value="adaptive" checked>
+                  <input class="visually-hidden radio" type="radio" name="grid-viev" id="filter-adaptive"
+                    value="adaptive" checked>
                   <label class="filter-text" for="filter-adaptive">Адаптивная</label>
                 </li>
                 <li class="filter-item">
@@ -81,14 +80,16 @@
               </ul>
             </fieldset>
             <fieldset class="fieldset r-indent">
-              <legend class="filter-title r-indent-title">Особенности:</legend>
+              <legend class="filter-title catalog-title">Особенности:</legend>
               <ul class="filter-list r-indent-ul">
                 <li class="filter-item">
-                  <input class="visually-hidden checkbox" type="checkbox" name="filter-slider" id="filter-slider" checked>
+                  <input class="visually-hidden checkbox" type="checkbox" name="filter-slider" id="filter-slider"
+                    checked>
                   <label class="filter-text" for="filter-slider">Слайдер</label>
                 </li>
                 <li class="filter-item">
-                  <input class="visually-hidden checkbox" type="checkbox" name="filter-advantages_block" id="filter-advantages_block">
+                  <input class="visually-hidden checkbox" type="checkbox" name="filter-advantages_block"
+                    id="filter-advantages_block">
                   <label class="filter-text" for="filter-advantages_block">Блок приемуществ</label>
                 </li>
                 <li class="filter-item">
@@ -105,29 +106,27 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="btn btn-gray filter-btn" type="submit">Показать</botton>
+            <button class="btn btn-grey filter-btn" type="submit">Показать</botton>
           </form>
         </div>
         <div class="catalog-content">
           <!-- Правый блок -->
           <!-- сортировка -->
           <div class="catalog-sort">
-            <h3 class="r-indent-title">Сортировать:</h3>
+            <h3 class="catalog-title">Сортировать:</h3>
             <ul class="sort-list r-indent-ul">
-              <li class="sort-item"><a href="#" class="sort-link">По цене</a></li>
-              <li class="sort-item"><a href="#" class="sort-link sort-link-disabled">По типу</a></li>
-              <li class="sort-item"><a href="#" class="sort-link sort-link-disabled">По Названию</a></li>
+              <li class="sort-item"><a href="#" class="sort-link sort-link-active">По цене</a></li>
+              <li class="sort-item"><a href="#" class="sort-link">По типу</a></li>
+              <li class="sort-item"><a href="#" class="sort-link">По Названию</a></li>
               <li class="sort-item sort-item-type">
-                <a class="sort-item-type-down" href="#">
+                <a class="sort-item-type-link sort-item-type-link-active" href="#">
                   <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.5 10L0 0H11" fill="" />
+                    <path d="M5.5 10L0 0H11" fill="none">
                   </svg>
                 </a>
-                <a class="sort-item-type-up" href="#">
+                <a class="sort-item-type-link" href="#">
                   <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.2">
-                      <path d="M5.5 0L0 10H11L5.5 0Z" fill="" />
-                    </g>
+                    <path d="M5.5 0L0 10H11L5.5 0Z" fill="none">
                   </svg>
                 </a>
               </li>
@@ -144,10 +143,10 @@
               </a>
               <div class="product-item-overlay">
                 <h3 class="product-item-title">
-                  <a class="r-indent-title" href="#">Sedona</a>
+                  <a class="catalog-title" href="#">Sedona</a>
                 </h3>
                 <p class="product-item-text">Информационный сайт для туристов</p>
-                <a class="btn btn-red">9900 &#8381;</a>
+                <a href="#" class="btn btn-red">9900 &#8381;</a>
               </div>
             </li>
             <li class="product-item"> <a href="" class="product-item-link">
@@ -158,10 +157,10 @@
               </a>
               <div class="product-item-overlay">
                 <h3 class="product-item-title">
-                  <a class="r-indent-title" href="#">Pink APP</a>
+                  <a class="catalog-title" href="#">Pink APP</a>
                 </h3>
                 <p class="product-item-text">Продуктовый лендинг приложения для iOS и Android</p>
-                <a class="btn btn-red">9900 &#8381;</a>
+                <a href="#" class="btn btn-red">9900 &#8381;</a>
               </div>
             </li>
             <li class="product-item"> <a href="" class="product-item-link">
@@ -172,10 +171,10 @@
               </a>
               <div class="product-item-overlay">
                 <h3 class="product-item-title">
-                  <a class="r-indent-title" href="#">Barbershop</a>
+                  <a class="catalog-title" href="#">Barbershop</a>
                 </h3>
                 <p class="product-item-text">Сайт салона красоты. Для мужчин, да.</p>
-                <a class="btn btn-red">9900 &#8381;</a>
+                <a href="#" class="btn btn-red">9900 &#8381;</a>
               </div>
             </li>
             <li class="product-item"> <a href="" class="product-item-link">
@@ -186,10 +185,10 @@
               </a>
               <div class="product-item-overlay">
                 <h3 class="product-item-title">
-                  <a class="r-indent-title" href="#">Mishka</a>
+                  <a class="catalog-title" href="#">Mishka</a>
                 </h3>
                 <p class="product-item-text">Интернет-магазин вязаных игрушек</p>
-                <a class="btn btn-red">9900 &#8381;</a>
+                <a href="#" class="btn btn-red">9900 &#8381;</a>
               </div>
             </li>
             <li class="product-item"> <a href="" class="product-item-link">
@@ -200,10 +199,10 @@
               </a>
               <div class="product-item-overlay">
                 <h3 class="product-item-title">
-                  <a class="r-indent-title" href="#">A PLUS</a>
+                  <a class="catalog-title" href="#">A PLUS</a>
                 </h3>
                 <p class="product-item-text">Лендинг курсов повышения квалификации</p>
-                <a class="btn btn-red">9900 &#8381;</a>
+                <a href="#" class="btn btn-red">9900 &#8381;</a>
               </div>
             </li>
             <li class="product-item"> <a href="" class="product-item-link">
@@ -214,20 +213,20 @@
               </a>
               <div class="product-item-overlay">
                 <h3 class="product-item-title">
-                  <a class="r-indent-title" href="#">Кваст</a>
+                  <a class="catalog-title" href="#">Кваст</a>
                 </h3>
                 <p class="product-item-text">Промо-сайт производителя крафтового кваса</p>
-                <a class="btn btn-red">9900 &#8381;</a>
+                <a href="#" class="btn btn-red">9900 &#8381;</a>
               </div>
             </li>
           </ul>
           <!-- Пагинация -->
           <ul class="pagination r-indent-ul">
-            <li class="pagination-item"><a class="pagination-link pagination-link-active btn btn-gray">1</a></li>
-            <li class="pagination-item"><a href="#" class="pagination-link btn btn-gray">2</a></li>
-            <li class="pagination-item"><a href="#" class="pagination-link btn btn-gray">3</a></li>
+            <li class="pagination-item"><a class="pagination-link pagination-link-active btn btn-grey">1</a></li>
+            <li class="pagination-item"><a href="#" class="pagination-link btn btn-grey">2</a></li>
+            <li class="pagination-item"><a href="#" class="pagination-link btn btn-grey">3</a></li>
             <li class="pagination-item"><a href="#"
-                class="pagination-link pagination-link-next btn btn-gray">Следующая</a>
+                class="pagination-link pagination-link-next btn btn-grey">Следующая</a>
             </li>
           </ul>
         </div>
@@ -243,9 +242,9 @@
       <div class="map" id="map">
         <!-- Будет карта -->
       </div>
-      <div class="container footer-inner wrapper">
+      <div class="container footer-inner container">
         <div class="contact-block">
-          <h3 class="r-indent contact-block-title r-indent-title">NЁRDS DESIGN STUDIO</h3>
+          <h3 class="r-indent contact-block-title">NЁRDS DESIGN STUDIO</h3>
           <p class="r-indent contact-block-adrress">
             191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
@@ -257,7 +256,7 @@
         </div>
       </div>
     </section>
-    <section class="footer-discount wrapper">
+    <section class="footer-discount container">
       <ul class="r-indent-ul social">
         <li class="social-item">
           <a class="social-link" href="https://vk.com/htmlacademy">
@@ -284,7 +283,7 @@
         </li>
       </ul>
       <p class="footer-discount-text">
-        <span class="footer-discount-lead">Давайте дружить, это выгодно!</span><br>Скидка 10% для друзей из социальных
+        <span class="footer-discount-lead">Давайте дружить, это выгодно!</span>Скидка 10% для друзей из социальных
         сетей.
       </p>
     </section>

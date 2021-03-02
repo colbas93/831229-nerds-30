@@ -20,7 +20,7 @@
   <!-- Шапка -->
   <div class="header-bar">
     <header class="header">
-      <div class="wrapper">
+      <div class="container">
         <nav class="nav">
           <a class="main-logo" title="Нёрдс">
             <img src="img/header/nerds-logo.svg" width="160" height="66" alt="Нёрдс" />
@@ -53,46 +53,49 @@
   <main>
     <h1 class="visually-hidden">Веб-студия "Nerds"</h1>
     <!-- Слайдер -->
-    <section class="slides header-bar">
-      <div class="wrapper">
+    <section class="hero">
+      <div class="container hero-wrapper">
         <ul class="r-indent-ul hero-slides">
           <li class="hero-slide">
-            <p class="r-indent hero-slide-title">Долго, дорого, скрупулезно.</p>
-            <p class="r-indent hero-slide-text">
-              Математически выверенный дизайн для вашего сайта или мобильного
-              приложения.
-            </p>
-            <a href="#" class="btn btn-red hero-slide-btn">Узнать больше</a>
+            <div class="hero-slide-content">
+              <p class="hero-slide-title">Долго, дорого, скрупулезно.</p>
+              <p class="hero-slide-text">
+                Математически выверенный дизайн для вашего сайта или мобильного
+                приложения.
+              </p>
+              <a href="#" class="btn btn-red hero-slide-btn">Узнать больше</a>
+            </div>
+          </li>
+          <li class="hero-slide">
+            <div class="hero-slide-content">
+              <p class="hero-slide-title">Любим математику как никто другой</p>
+              <p class="hero-slide-text">
+                Никакого креатива, только математические формулы для расчета
+                идеальных пропорций.
+              </p>
+              <a href="#" class="btn btn-red hero-slide-btn">Узнать больше</a>
+            </div>
+          </li>
+          <li class="hero-slide">
+            <div class="hero-slide-content">
+              <p class="hero-slide-title">Только ночь, только хардкор</p>
+              <p class="hero-slide-text">
+                Работать днем, как все? Мы против этого. Ближе к полуночи работа
+                только начинается.
+              </p>
+              <a href="#" class="btn btn-red hero-slide-btn">Узнать больше</a>
+            </div>
           </li>
         </ul>
-      </div>
-      <div class="wrapper">
-        <ul class="r-indent-ul hero-slides">
-          <li class="hero-slide">
-            <p class="r-indent hero-slide-title">Любим математику как никто другой</p>
-            <p class="r-indent hero-slide-text">
-              Никакого креатива, только математические формулы для расчета
-              идеальных пропорций.
-            </p>
-            <a href="#" class="btn btn-red hero-slide-btn">Узнать больше</a>
-          </li>
-        </ul>
-      </div>
-      <div class="wrapper">
-        <ul class="r-indent-ul hero-slides">
-          <li class="hero-slide">
-            <p class="r-indent hero-slide-title">Только ночь, только хардкор</p>
-            <p class="r-indent hero-slide-text">
-              Работать днем, как все? Мы против этого. Ближе к полуночи работа
-              только начинается.
-            </p>
-            <a href="#" class="btn btn-red hero-slide-btn">Узнать больше</a>
-          </li>
+        <ul class="hero-controls r-indent-ul">
+          <li class="hero-controls-item"><button class="hero-controls-dot hero-controls-dot-active" aria-label="Показать слайд 1"></button></li>
+          <li class="hero-controls-item"><button class="hero-controls-dot" aria-label="Показать слайд 2"></button></li>
+          <li class="hero-controls-item"><button class="hero-controls-dot" aria-label="Показать слайд 3"></button></li>
         </ul>
       </div>
     </section>
     <!--Услуги  -->
-    <section class="services wrapper">
+    <section class="services container section-border">
       <h2 class="visually-hidden">Услуги</h2>
       <ul class="r-indent-ul service-list">
         <li class="service-list-item">
@@ -125,7 +128,7 @@
       </ul>
     </section>
     <!-- О компании -->
-    <section class="company wrapper">
+    <section class="company container section-border">
       <h2 class="visually-hidden">О нас</h2>
       <!-- Левый блок -->
       <div class="company-column company-column-left">
@@ -176,7 +179,7 @@
       </div>
     </section>
     <!-- Портфолио -->
-    <section class="clients wrapper">
+    <section class="clients container section-border">
       <ul class="r-indent-ul clients-list">
         <li class="client-list-item">
           <a class="client-list-link" href="https://up.htmlacademy.ru/htmlcss/30">
@@ -211,7 +214,7 @@
       <div class="map" id="map">
         <!-- Будет карта -->
       </div>
-      <div class="container footer-inner wrapper">
+      <div class="container footer-inner container">
         <div class="contact-block">
           <h3 class="r-indent contact-block-title r-indent-title">NЁRDS DESIGN STUDIO</h3>
           <p class="r-indent contact-block-adrress">
@@ -225,7 +228,7 @@
         </div>
       </div>
     </section>
-    <section class="footer-discount wrapper">
+    <section class="footer-discount container">
       <ul class="r-indent-ul social">
         <li class="social-item">
           <a class="social-link" href="https://vk.com/htmlacademy">
