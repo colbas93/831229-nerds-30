@@ -18,36 +18,34 @@
 
 <body class="page-body">
   <!-- Шапка -->
-  <div class="header-bar">
-    <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a class="main-logo" title="Нёрдс">
-            <img src="img/header/nerds-logo.svg" width="160" height="66" alt="Нёрдс" />
-          </a>
-          <ul class="r-indent-ul menu">
-            <li class="menu-item">
-              <a class="menu-link" href="#">Студия</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Клиенты</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="catalog.html">Магазин</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Контакты</a>
-            </li>
-          </ul>
-          <ul class="r-indent-ul user">
-            <li class="user-item">
-              <a class="user-link menu-link basket-link" href="#">Корзина</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  </div>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="main-logo" title="Нёрдс">
+          <img src="img/header/nerds-logo.svg" width="160" height="66" alt="Нёрдс">
+        </a>
+        <ul class="r-indent-ul menu">
+          <li class="menu-item">
+            <a class="menu-link" href="#">Студия</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Клиенты</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link menu-link-active" href="catalog.html">Магазин</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="r-indent-ul user">
+          <li class="user-item">
+            <a class="user-link menu-link basket-link" href="#">Корзина</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <!-- Основное содержимое -->
   <main>
@@ -88,7 +86,8 @@
           </li>
         </ul>
         <ul class="hero-controls r-indent-ul">
-          <li class="hero-controls-item"><button class="hero-controls-dot hero-controls-dot-active" aria-label="Показать слайд 1"></button></li>
+          <li class="hero-controls-item"><button class="hero-controls-dot hero-controls-dot-active"
+              aria-label="Показать слайд 1"></button></li>
           <li class="hero-controls-item"><button class="hero-controls-dot" aria-label="Показать слайд 2"></button></li>
           <li class="hero-controls-item"><button class="hero-controls-dot" aria-label="Показать слайд 3"></button></li>
         </ul>
@@ -216,7 +215,7 @@
       </div>
       <div class="container footer-inner container">
         <div class="contact-block">
-          <h3 class="r-indent contact-block-title r-indent-title">NЁRDS DESIGN STUDIO</h3>
+          <h3 class="r-indent contact-block-title">NЁRDS DESIGN STUDIO</h3>
           <p class="r-indent contact-block-adrress">
             191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
@@ -260,19 +259,32 @@
       </p>
     </section>
   </footer>
-  <!--   <section class="modal">
-    <h2 class="modal-title">Напишите нам</h2>
-    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-      <label for="user">Ваше имя:</label>
-      <input type="text" name="user" id="user" placeholder="Имя Фамилия" />
-      <label for="email">Ваша email:</label>
-      <input type="email" name="email" id="email" placeholder="email@example.com" />
-      <label for="message">Текст письма:</label>
-      <textarea name="message" id="message" cols="30" rows="5" placeholder="В свободной форме"></textarea>
-    </form>
-    <button class="btn btn-red modal-btn" type="button">Отправить</button>
-  </section>
--->
+
+  <div class="overlay">
+    <div class="modal">
+      <h2 class="modal-title r-indent">Напишите нам</h2>
+      <button class="modal-exit">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.3299 10.5005L20.7072 3.12321C21.0963 2.7317 21.0963 2.09952 20.7072 1.70801L19.292 0.291799C18.9005 -0.0972665 18.2683 -0.0972665 17.8768 0.291799L10.4995 7.67009L3.12221 0.2928C2.7307 -0.0962657 2.09852 -0.0962657 1.70701 0.2928L0.291799 1.70801C-0.0972665 2.09952 -0.0972665 2.7317 0.291799 3.12321L7.66909 10.5005L0.291799 17.8778C-0.0972665 18.2693 -0.0972665 18.9015 0.291799 19.293L1.70801 20.7082C2.09952 21.0973 2.7317 21.0973 3.12321 20.7082L10.5005 13.3309L17.8778 20.7082C18.2693 21.0973 18.9015 21.0973 19.293 20.7082L20.7082 19.293C21.0973 18.9015 21.0973 18.2693 20.7082 17.8778L13.3299 10.5005Z"
+            fill="#FB565A">
+        </svg>
+      </button>
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="modal-label"><span class="modal-label-text">Ваше имя:</span>
+          <input type="text" name="user" placeholder=" Имя Фамилия">
+        </label>
+        <label class="modal-label"><span class="modal-label-text">Ваш email:</span>
+          <input type="email" name="email" placeholder="email@example.com">
+        </label>
+        <label class="modal-label"><span class="modal-label-text"> Текст письма:</span>
+          <textarea name="message" cols="30" rows="6" placeholder="В свободной форме"></textarea>
+        </label>
+        <button class="btn btn-red modal-btn" type="button">Отправить</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 
 </html>

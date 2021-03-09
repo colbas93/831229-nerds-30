@@ -8,7 +8,7 @@ Variables
   --grey-100: #eeeeee;
   --grey-200: #e1e1e1;
   --grey-300: #d7dcde;
-  --grey-400: #DBDBDB;
+  --grey-400: #dbdbdb;
   --grey-0400: #fbfbfb;
   --grey-500: #dfdfdf;
   --grey-600: #d5d5d5;
@@ -20,7 +20,7 @@ Variables
   --grey-1200: #444444;
   --grey-1300: #283136;
   --black: #000000;
-  --black-100: #231F20;
+  --black-100: #231f20;
   --red-100: #fb565a;
   --red-200: #e74246;
   --red-300: #d7373b;
@@ -51,7 +51,9 @@ Global
   padding: 0;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
@@ -91,7 +93,8 @@ img {
   list-style: none;
 }
 
-.visually-hidden, .visually-hidden:not(:focus):not(:active) {
+.visually-hidden,
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -146,7 +149,8 @@ Buttons
   background-color: var(--red-100);
 }
 
-.btn-red:hover, .btn-red:focus {
+.btn-red:hover,
+.btn-red:focus {
   background-color: var(--red-200);
   transition: var(--transition);
 }
@@ -159,7 +163,8 @@ Buttons
   background-color: var(--green-100);
 }
 
-.btn-green:hover, .btn-green:focus {
+.btn-green:hover,
+.btn-green:focus {
   background-color: var(--green-200);
   transition: var(--transition);
 }
@@ -172,7 +177,8 @@ Buttons
   background-color: var(--yellow-100);
 }
 
-.btn-yellow:hover, .btn-yellow:focus {
+.btn-yellow:hover,
+.btn-yellow:focus {
   background-color: var(--yellow-200);
   transition: var(--transition);
 }
@@ -186,7 +192,8 @@ Buttons
   color: var(--black);
 }
 
-.btn-grey:hover, .btn-grey:focus {
+.btn-grey:hover,
+.btn-grey:focus {
   background-color: var(--grey-400);
   transition: var(--transition);
 }
@@ -245,7 +252,8 @@ Header
   left: 0px;
 }
 
-.menu-link:hover, .menu-link:focus {
+.menu-link:hover,
+.menu-link:focus {
   color: var(--red-100);
   transition: var(--transition);
 }
@@ -257,6 +265,7 @@ Header
 /*======================================
 Hero
 ========================================*/
+
 .hero {
   background-color: var(--grey-100);
   min-height: 431px;
@@ -283,7 +292,7 @@ Hero
   flex-basis: 100%;
   min-height: 431px;
   padding-top: 78px;
-  background-position: right center;
+  background-position: right bottom;
   background-repeat: no-repeat;
   background-color: var(--grey-100);
 }
@@ -294,11 +303,13 @@ Hero
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
+  margin-bottom: 25px;
 }
 
 .hero-slide-text {
   padding: 0;
   margin: 0;
+  margin-bottom: 38px;
 }
 
 .hero-slide:nth-child(1) {
@@ -354,7 +365,6 @@ Hero
   height: 8px;
   border-radius: 50%;
 }
-
 
 /*======================================
 Service
@@ -486,13 +496,13 @@ Clients
   padding-bottom: 44px;
 }
 
-.clients-list-item {
+.client-list-item {
   position: relative;
 }
 
 .client-list-item:not(:first-child)::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 2px;
   height: 52px;
   background-color: var(--grey-100);
@@ -520,22 +530,24 @@ Clients
   opacity: 0.1;
 }
 
-
 /*======================================
 Footer
 ========================================*/
 
 /* Contacts */
+
 .contact-block {
-  margin-left: auto;
   max-width: 319px;
   width: 100%;
   color: var(--grey-1100);
-  background-color: #444;
+  padding: 49px 50px 47px;
+  max-width: 319px;
 }
 
 .contact-block-title {
   padding-top: 49px;
+  margin: 0;
+  padding: 0;
   margin-bottom: 23px;
   font-weight: 700;
   font-size: 18px;
@@ -548,6 +560,10 @@ Footer
   margin-bottom: 16px;
 }
 
+.contact-block-phone-wrapper {
+  margin-bottom: 37px;
+}
+
 .contact-block-phone {
   color: inherit;
   line-height: 18px;
@@ -555,8 +571,7 @@ Footer
 
 .contact-block-btn {
   padding: 16px 44px;
-  margin-top: 37px;
-  margin-bottom: 47px;
+  max-width: 100%;
 }
 
 /* Соцсети */
@@ -618,21 +633,78 @@ Modal
 
 /* modal-form */
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  padding: 63px 90px 84px 100px;
+  background-color: #fff;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
 .modal-title {
   font-weight: 700;
   font-size: 45px;
   line-height: 53px;
+  margin-bottom: 37px;
 }
 
-.modal label {
+.modal-exit {
+  position: absolute;
+  top: 78px;
+  right: 90px;
+  border: 0;
+  border: none;
+  outline: none;
+  outline: 0;
+  background-color: #fff;
+}
+
+.modal-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal-label {
+  width: calc(100% / 2 - 20px);
+}
+
+.modal-label:nth-child(3) {
+  width: 100%;
+  margin-top: 34px;
+  margin-bottom: 47px;
+}
+
+.modal-label-text {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
+  display: block;
 }
 
 .modal input {
   border: 2px solid var(--grey-300);
   border-radius: 3px;
+  transition: var(--transition);
+  width: 360px;
+  height: 50px;
+  padding: 16px;
+  margin-top: 9px;
 }
 
 .modal input:hover {
@@ -647,6 +719,9 @@ Modal
 .modal textarea {
   border: 2px solid var(--grey-300);
   border-radius: 3px;
+  width: 100%;
+  padding: 16px;
+  margin-top: 9px;
 }
 
 .modal textarea:hover {
@@ -741,7 +816,7 @@ Filter
   margin-bottom: 17px;
 }
 
-.filter-title {
+.fieldset-title {
   margin-bottom: 16px;
 }
 
@@ -750,7 +825,7 @@ Filter
   position: relative;
 }
 
-.radio+.filter-text::before {
+.radio + .filter-text::before {
   position: absolute;
   content: "";
   width: 25px;
@@ -761,11 +836,11 @@ Filter
   background: url(/img/catalog/radio-off.svg) no-repeat center/contain;
 }
 
-.radio:checked+.filter-text::before {
+.radio:checked + .filter-text::before {
   background: url(/img/catalog/radio-on.svg) no-repeat center;
 }
 
-.checkbox+.filter-text::before {
+.checkbox + .filter-text::before {
   position: absolute;
   content: "";
   width: 23px;
@@ -774,7 +849,7 @@ Filter
   background: url(/img/catalog/checkbox-off.svg) no-repeat center/contain;
 }
 
-.checkbox:checked+.filter-text::before {
+.checkbox:checked + .filter-text::before {
   background: url(/img/catalog/checkbox-on.svg);
   width: 25px;
 }
@@ -816,7 +891,8 @@ Filter
   transition: var(--transition);
 }
 
-.sort-link:hover, .sort-link:focus {
+.sort-link:hover,
+.sort-link:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -824,7 +900,9 @@ Filter
   color: var(--black);
 }
 
-.sort-link-active, .sort-link-active:hover, .sort-link-active:focus {
+.sort-link-active,
+.sort-link-active:hover,
+.sort-link-active:focus {
   color: var(--black);
   cursor: default;
 }
@@ -843,7 +921,7 @@ Filter
 }
 
 .sort-item-type-link:hover path,
- .sort-item-type-link:focus path {
+.sort-item-type-link:focus path {
   fill: var(--grey-900);
 }
 
@@ -902,21 +980,16 @@ Filter
   line-height: 18px;
 }
 
-
-.product-item:hover,
-.product-item:active,
-.product-item:focus {
+.product-item:hover {
   box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
   border-radius: 5px;
 }
 
-.product-item:hover .product-item-browser,
-.product-item:active .product-item-browser {
+.product-item:hover .product-item-browser {
   opacity: 1;
 }
 
-.product-item:hover .product-item-overlay,
-.product-item:active .product-item-overlay {
+.product-item:hover .product-item-overlay {
   transform: translateY(0);
   transition: all 0.4s ease-in;
 }
