@@ -887,10 +887,6 @@ Filter
   color :var(--grey-1300);
   background-color: var(--grey-100);
 }
-.min-price {
-}
-.max-price {
-}
 
 .filter-item {
   display: block;
