@@ -59,16 +59,16 @@
           <h3 class="visually-hidden">Фильтр товаров</h3>
           <form class="filter" method="POST" action="https://echo.htmlacademy.ru">
             <fieldset class="fieldset filter-price r-indent ">
-              <legend class="fieldset-title catalog-title">Стоимость:</legend>
+              <legend class="catalog-title">Стоимость:</legend>
               <div class="range-filter">
                 <div class="range-controls">
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min"></div>
-                  <div class="toggle toggle-max"></div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
                 </div>
-                <div class="price-conteols">
+                <div class="price-controls">
                   <label class="min-price">
                     от <input type="number" name="min-price" value="0">
                   </label>
@@ -79,7 +79,7 @@
               </div>
             </fieldset>
             <fieldset class="fieldset r-indent">
-              <legend class="fieldset-title catalog-title">Сетка:</legend>
+              <legend class="catalog-title">Сетка:</legend>
               <ul class="filter-list r-indent-ul">
                 <li class="filter-item">
                   <input class="visually-hidden radio" type="radio" name="grid-viev" id="filter-adaptive"
@@ -97,7 +97,7 @@
               </ul>
             </fieldset>
             <fieldset class="fieldset r-indent">
-              <legend class="fieldset-title catalog-title">Особенности:</legend>
+              <legend class="catalog-title">Особенности:</legend>
               <ul class="filter-list r-indent-ul">
                 <li class="filter-item">
                   <input class="visually-hidden checkbox" type="checkbox" name="filter-slider" id="filter-slider"
@@ -306,7 +306,7 @@
     </section>
   </footer>
 
-  <div class="overlay">
+  <!-- <div class="overlay">
     <div class="modal">
       <h2 class="modal-title r-indent">Напишите нам</h2>
       <button class="modal-exit">
@@ -329,7 +329,7 @@
         <button class="btn btn-red modal-btn" type="button">Отправить</button>
       </form>
     </div>
-  </div>
+  </div> -->
 
 </body>
 
